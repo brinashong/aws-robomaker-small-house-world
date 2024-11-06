@@ -1,40 +1,60 @@
-<?xml version='1.0'?>
-<sdf version='1.6'>
-  <model name='cup_blue'>
-    <link name='link_13'>
-       <visual name='visual'>
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="cup_blue">
+    <!-- Link Definition -->
+    <link name="cup_link">
+      <!-- Pose -->
+      <pose>0 0 0 0 0 0</pose>
+
+      <!-- Visual Properties -->
+      <visual name="visual">
+        <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://cup_blue/meshes/cup1.dae</uri>
-            <scale>1 1 1</scale>
+            <uri>model://cup_blue/meshes/cup1.dae</uri> <!-- Path to your DAE file -->
+            <scale>1 1 1</scale> <!-- Adjust scale if necessary -->
           </mesh>
         </geometry>
         <material>
           <lighting>1</lighting>
-          <ambient>0.305 0.439 0.882 1</ambient>
-          <diffuse>0.305 0.439 0.882 1</diffuse>
-          <specular>0.01 0.01 0.01 1</specular>
+          <ambient>0.2 0.2 0.8 1</ambient> <!-- Slight blue tint for ambient color -->
+          <diffuse>0.2 0.2 0.8 1</diffuse>  <!-- Blue diffuse color -->
+          <specular>0.1 0.1 0.1 1</specular>
           <emissive>0 0 0 1</emissive>
-          <shader type='vertex'>
-            <normal_map>__default__</normal_map>
-          </shader>
         </material>
         <cast_shadows>1</cast_shadows>
-        <transparency>0</transparency>
       </visual>
-      <collision name='collision'>
-        <laser_retro>0</laser_retro>
-        <max_contacts>10</max_contacts>
-        <pose frame=''>0 0 0 0 -0 0</pose>
+
+      <!-- Collision Properties -->
+      <collision name="collision">
+        <pose>0 0 0 0 0 0</pose>
         <geometry>
           <mesh>
-            <uri>model://cup_blue/meshes/cup1.dae</uri>
-            <scale>1 1 1</scale>
+            <uri>model://cup_blue/meshes/cup1.dae</uri> <!-- Path to your DAE file -->
+            <scale>1 1 1</scale> <!-- Match scale to visual geometry -->
           </mesh>
         </geometry>
+        <max_contacts>10</max_contacts>
       </collision>
+
+      <!-- Inertial Properties -->
+      <inertial>
+        <mass>0.3</mass> <!-- Set mass, adjust as needed -->
+        <inertia>
+          <ixx>0.001</ixx> <!-- Example values, adjust based on cup size -->
+          <iyy>0.001</iyy>
+          <izz>0.001</izz>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyz>0</iyz>
+        </inertia>
+      </inertial>
     </link>
-    <static>1</static>
-    <allow_auto_disable>1</allow_auto_disable>
+
+    <!-- Model Properties -->
+    <static>false</static> <!-- Set to true if the cup should be stationary -->
+    <allow_auto_disable>true</allow_auto_disable>
   </model>
 </sdf>
+
+
