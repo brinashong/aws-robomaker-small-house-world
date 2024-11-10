@@ -2,6 +2,10 @@
 
 <sdf version='1.6'>
   <world name='default'>
+
+    <!-- A gazebo links attacher -->
+    <plugin name="ros_link_attacher_plugin" filename="libgazebo_ros_link_attacher.so"/>
+
     <!-- override the default position of the camera !-->
     <gui>
       <camera name='gzclient_camera'>
