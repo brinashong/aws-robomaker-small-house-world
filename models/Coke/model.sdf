@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+
+<sdf version="1.6">
+  <model name='Coke'>
+    <static>false</static>
+    <link name="link">
+      <pose>0 0 0.03 0 0 0</pose>
+
+        <visual name="visual">
+          <geometry>
+            <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh>
+          </geometry>
+        </visual>
+
+        <collision name="collision">
+          <geometry>
+            <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh>
+          </geometry>
+        </collision>
+
+        <!-- TODO: Replace with accurate values of mass and inertia -->
+        <inertial>
+          <mass>0.0149</mass>
+          <pose>0 0 0.03 0 0 0</pose>
+          <inertia>
+            <ixx>0.000035</ixx>
+            <iyy>0.000035</iyy>
+            <izz>0.000032</izz>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyz>0.0</iyz>
+          </inertia>
+          </inertial>
+    </link>
+  </model>
+</sdf>
