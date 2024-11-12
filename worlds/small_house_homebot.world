@@ -53,7 +53,112 @@
         </include>
         <pose frame=''>5.778478 0.927078 0.85 0 0 -1.466536</pose>
 	</model>
-	
+
+  <model name='nuh_bag_2'>
+    <link name='link'>
+      <self_collide>0</self_collide>
+      <enable_wind>0</enable_wind>
+      <kinematic>0</kinematic>
+      <pose>0 0 0.5 0 -0 0</pose>
+      <inertial>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.080001</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.080001</iyy>
+          <iyz>0</iyz>
+          <izz>0.080001</izz>
+        </inertia>
+        <pose>0 0 0 0 -0 0</pose>
+      </inertial>
+      <visual name='bag_link'>
+        <pose>0 0 -0.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.25 0.1 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1 0.9 0 1</ambient>
+          <diffuse>1 0.9 0 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <collision name='bag_link'>
+        <pose>0 0 -0.1 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.15 0.1 0.1</size>
+          </box>
+        </geometry>
+        <surface>
+          <friction>
+            <ode>
+              <mu>100</mu>
+              <mu2>50</mu2>
+            </ode>
+            <torsional>
+              <ode/>
+            </torsional>
+          </friction>
+          <contact>
+            <ode/>
+          </contact>
+          <bounce/>
+        </surface>
+        <max_contacts>10</max_contacts>
+      </collision>
+      <visual name='h1_link'>
+        <pose>0.0625 0 -0.0325 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.005 0.01 0.065</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1 0.9 0 1</ambient>
+          <diffuse>1 0.9 0 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <visual name='h2_link'>
+        <pose>-0.0625 0 -0.0325 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.005 0.01 0.065</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>1 0.9 0 1</ambient>
+          <diffuse>1 0.9 0 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+      <visual name='handle_link'>
+        <pose>0 0 0 0 -1.57079 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.005</radius>
+            <length>0.13</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>1 0.9 0 1</ambient>
+          <diffuse>1 0.9 0 1</diffuse>
+          <specular>0 0 0 0</specular>
+          <emissive>0 0 0 1</emissive>
+        </material>
+      </visual>
+    </link>
+    <static>0</static>
+    <allow_auto_disable>1</allow_auto_disable>
+    <pose>0.771775 -2.84306 0 0 -0 0</pose>
+  </model>
+
   <model name='can_coke'>
         <static>false</static>
         <include>
@@ -62,13 +167,50 @@
         <pose frame=''>2.07556 -1.62802 0.366351 0 -0 0</pose>
 	</model>
 	
-  <model name='can_pepsi'>
-        <static>false</static>
-        <include>
-            <uri>model://can_pepsi</uri>
-        </include>
-        <pose frame=''>1.888160 -1.55947 0.366351 0 0 0</pose>
-	</model>
+ <!--  <model name='coke'> -->
+ <!--        <static>false</static> -->
+ <!--        <include> -->
+ <!--            <uri>model://Coke</uri> -->
+ <!--        </include> -->
+ <!--        <pose frame=''>1.888160 -1.55947 0.366351 0 0 0</pose> -->
+ <!--        <link name='link'> -->
+ <!--          <pose>1.888160 -1.55947 0.366351 0 0 0</pose> -->
+ <!--          <velocity>0 0 0 0 0 0</velocity> -->
+ <!--        </link> -->
+	<!-- </model> -->
+
+  <model name='Coke'>
+    <static>false</static>
+    <link name="link">
+        <pose>1.888160 -1.55947 0.366351 0 0 0</pose>
+
+        <visual name="visual">
+          <geometry>
+            <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh>
+          </geometry>
+        </visual>
+
+        <collision name="collision">
+          <geometry>
+            <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh>
+          </geometry>
+        </collision>
+
+        <!-- TODO: Replace with accurate values of mass and inertia -->
+        <inertial>
+          <mass>0.0149</mass>
+          <pose>0 0 0.03 0 0 0</pose>
+          <inertia>
+            <ixx>0.000035</ixx>
+            <iyy>0.000035</iyy>
+            <izz>0.000032</izz>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyz>0.0</iyz>
+          </inertia>
+          </inertial>
+    </link>
+  </model>
 	
   <model name='cup_blue'>
         <static>false</static>
