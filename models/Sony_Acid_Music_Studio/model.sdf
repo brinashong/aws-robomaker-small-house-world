@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!--
+Copyright 2020 Google LLC.
+
+This work is licensed under the Creative Commons Attribution 4.0
+International License. To view a copy of this license, visit
+http://creativecommons.org/licenses/by/4.0/ or send a letter
+to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+-->
+<sdf version="1.6">
+  <model name="Sony_Acid_Music_Studio">
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://Sony_Acid_Music_Studio/meshes/model.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision_0">
+        <geometry>
+          <mesh>
+            <uri>model://Sony_Acid_Music_Studio/meshes/model.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <!-- TODO: Replace with accurate values of mass and inertia -->
+      <inertial>
+        <pose>0 0 0.05 0 0 0</pose>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.00354</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.00771</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.0125</izz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+</sdf>

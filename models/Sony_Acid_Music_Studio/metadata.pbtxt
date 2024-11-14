@@ -1,0 +1,35 @@
+model {
+  file: "model.sdf"
+}
+name: "Sony_Acid_Music_Studio"
+description: "Sony Acid Music Studio"
+version: 1
+authors {
+  name: "Google"
+  email: "scanned-objects@google.com"
+}
+legal {
+  copyright: "Copyright 2020 Google LLC."
+  license: "Creative Commons Attribution 4.0 International"
+}
+annotations {
+  key: "brand"
+  value: "Sony"
+}
+annotations {
+  key: "gtin"
+  value: "00855309627102"
+}
+annotations {
+  key: "sku"
+  value: "00855309627102"
+}
+compatibilities {
+  name: "Gazebo"
+  version {
+    major: 11
+  }
+}
+categories {
+  first: "Consumer Goods"
+}

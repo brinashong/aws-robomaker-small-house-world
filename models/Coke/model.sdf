@@ -30,7 +30,7 @@
             <ixz>0.0</ixz>
             <iyz>0.0</iyz>
           </inertia>
-          </inertial>
+        </inertial>
     </link>
   </model>
 </sdf>
