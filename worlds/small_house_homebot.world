@@ -38,148 +38,187 @@
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
 
-  <model name='book_green'>
-        <static>false</static>
-        <include>
-            <uri>model://book_green</uri>
-        </include>
-        <pose frame=''>5.780757 0.695414 0.85 0 0 -1.466536</pose>
-	</model>
-	
-  <model name='book_pink'>
-        <static>false</static>
-        <include>
-            <uri>model://book_pink</uri>
-        </include>
-        <pose frame=''>5.778478 0.927078 0.85 0 0 -1.466536</pose>
-	</model>
-
-  <model name='nuh_bag_2'>
-    <link name='link'>
-      <self_collide>0</self_collide>
-      <enable_wind>0</enable_wind>
-      <kinematic>0</kinematic>
-      <pose>0 0 0.5 0 -0 0</pose>
-      <inertial>
-        <mass>1</mass>
-        <inertia>
-          <ixx>0.080001</ixx>
-          <ixy>0</ixy>
-          <ixz>0</ixz>
-          <iyy>0.080001</iyy>
-          <iyz>0</iyz>
-          <izz>0.080001</izz>
-        </inertia>
-        <pose>0 0 0 0 -0 0</pose>
-      </inertial>
-      <visual name='bag_link'>
-        <pose>0 0 -0.1 0 -0 0</pose>
+  <model name="KitchenMug">
+    <link name="link">
+      <pose>7.38 0.729 0.8 0 0 3.054</pose>
+      <visual name="visual">
         <geometry>
-          <box>
-            <size>0.25 0.1 0.1</size>
-          </box>
+          <mesh>
+            <uri>model://Threshold_Porcelain_Coffee_Mug_All_Over_Bead_White/meshes/model.obj</uri>
+          </mesh>
         </geometry>
-        <material>
-          <ambient>1 0.9 0 1</ambient>
-          <diffuse>1 0.9 0 1</diffuse>
-          <specular>0 0 0 0</specular>
-          <emissive>0 0 0 1</emissive>
-        </material>
       </visual>
-      <collision name='bag_link'>
-        <pose>0 0 -0.1 0 -0 0</pose>
+      <collision name="collision_0">
         <geometry>
-          <box>
-            <size>0.15 0.1 0.1</size>
-          </box>
+          <mesh>
+            <uri>model://Threshold_Porcelain_Coffee_Mug_All_Over_Bead_White/meshes/model.obj</uri>
+          </mesh>
         </geometry>
-        <surface>
-          <friction>
-            <ode>
-              <mu>100</mu>
-              <mu2>50</mu2>
-            </ode>
-            <torsional>
-              <ode/>
-            </torsional>
-          </friction>
-          <contact>
-            <ode/>
-          </contact>
-          <bounce/>
-        </surface>
-        <max_contacts>10</max_contacts>
       </collision>
-      <visual name='h1_link'>
-        <pose>0.0625 0 -0.0325 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>0.005 0.01 0.065</size>
-          </box>
-        </geometry>
-        <material>
-          <ambient>1 0.9 0 1</ambient>
-          <diffuse>1 0.9 0 1</diffuse>
-          <specular>0 0 0 0</specular>
-          <emissive>0 0 0 1</emissive>
-        </material>
-      </visual>
-      <visual name='h2_link'>
-        <pose>-0.0625 0 -0.0325 0 -0 0</pose>
-        <geometry>
-          <box>
-            <size>0.005 0.01 0.065</size>
-          </box>
-        </geometry>
-        <material>
-          <ambient>1 0.9 0 1</ambient>
-          <diffuse>1 0.9 0 1</diffuse>
-          <specular>0 0 0 0</specular>
-          <emissive>0 0 0 1</emissive>
-        </material>
-      </visual>
-      <visual name='handle_link'>
-        <pose>0 0 0 0 -1.57079 0</pose>
-        <geometry>
-          <cylinder>
-            <radius>0.005</radius>
-            <length>0.13</length>
-          </cylinder>
-        </geometry>
-        <material>
-          <ambient>1 0.9 0 1</ambient>
-          <diffuse>1 0.9 0 1</diffuse>
-          <specular>0 0 0 0</specular>
-          <emissive>0 0 0 1</emissive>
-        </material>
-      </visual>
+      <inertial>
+        <mass>0.02</mass>
+        <pose>0.02 0 0.04 0 0 0</pose>
+        <inertia>
+          <ixx>0.000035</ixx>
+          <iyy>0.000035</iyy>
+          <izz>0.000032</izz>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyz>0.0</iyz>
+        </inertia>
+      </inertial>
     </link>
-    <static>0</static>
-    <allow_auto_disable>1</allow_auto_disable>
-    <pose>0.771775 -2.84306 0 0 -0 0</pose>
   </model>
+  <model name="KitchenBowl">
+    <link name="link">
+      <pose>7.17 0.723 0.8 0 0 0</pose>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://Threshold_Bead_Cereal_Bowl_White/meshes/model.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision_0">
+        <geometry>
+          <mesh>
+            <uri>model://Threshold_Bead_Cereal_Bowl_White/meshes/model.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
 
-  <model name='can_coke'>
-        <static>false</static>
-        <include>
-            <uri>model://can_coke</uri>
-        </include>
-        <pose frame=''>2.07556 -1.62802 0.366351 0 -0 0</pose>
-	</model>
-	
- <!--  <model name='coke'> -->
+      <!-- TODO: Replace with accurate values of mass and inertia -->
+      <inertial>
+        <mass>0.5</mass>
+        <pose>0 0 0.01 0 0 0</pose>
+          <inertia>
+            <ixx>0.0045</ixx>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyy>0.0045</iyy>
+            <iyz>0.0</iyz>
+            <izz>0.00675</izz>
+          </inertia>
+      </inertial>
+    </link>
+  </model>
+ <!--  <model name='book_green'> -->
  <!--        <static>false</static> -->
  <!--        <include> -->
- <!--            <uri>model://Coke</uri> -->
+ <!--            <uri>model://book_green</uri> -->
  <!--        </include> -->
- <!--        <pose frame=''>1.888160 -1.55947 0.366351 0 0 0</pose> -->
- <!--        <link name='link'> -->
- <!--          <pose>1.888160 -1.55947 0.366351 0 0 0</pose> -->
- <!--          <velocity>0 0 0 0 0 0</velocity> -->
- <!--        </link> -->
+ <!--        <pose frame=''>5.780757 0.695414 0.85 0 0 -1.466536</pose> -->
 	<!-- </model> -->
 
-  <model name='Coke'>
+  <model name="SonyBox">
+    <link name="link">
+      <pose>5.780757 0.695414 0.85 0 0 0</pose>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://Sony_Acid_Music_Studio/meshes/model.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision_0">
+        <geometry>
+          <mesh>
+            <uri>model://Sony_Acid_Music_Studio/meshes/model.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <!-- TODO: Replace with accurate values of mass and inertia -->
+      <inertial>
+        <pose>0 0 0.05 0 0 0</pose>
+        <mass>1.0</mass>
+        <inertia>
+          <ixx>0.00354</ixx>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyy>0.00771</iyy>
+          <iyz>0.0</iyz>
+          <izz>0.0125</izz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+ <!--  <model name='book_pink'> -->
+ <!--        <static>false</static> -->
+ <!--        <include> -->
+ <!--            <uri>model://book_pink</uri> -->
+ <!--        </include> -->
+ <!--        <pose frame=''>5.778478 0.927078 0.85 0 0 -1.466536</pose> -->
+	<!-- </model> -->
+
+  <model name="Book">
+    <link name="link">
+      <pose>5.778478 0.927078 0.85 0 0 0</pose>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://Eat_to_Live_The_Amazing_NutrientRich_Program_for_Fast_and_Sustained_Weight_Loss_Revised_Edition_Book/meshes/model.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision_0">
+        <geometry>
+          <mesh>
+            <uri>model://Eat_to_Live_The_Amazing_NutrientRich_Program_for_Fast_and_Sustained_Weight_Loss_Revised_Edition_Book/meshes/model.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+
+      <!-- TODO: Replace with accurate values of mass and inertia -->
+      <inertial>
+        <pose>0 0 0.07 0 0 0</pose>
+        <mass>0.5</mass>
+        <inertia>
+        <ixx>0.00109</ixx>
+        <ixy>0.0</ixy>
+        <ixz>0.0</ixz>
+        <iyy>0.00245</iyy>
+        <iyz>0.0</iyz>
+        <izz>0.00400</izz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+
+  <model name='Coke2'>
+    <static>false</static>
+    <link name="link">
+        <pose>2.07556 -1.62802 0.366351 0 0 0</pose>
+
+        <visual name="visual">
+          <geometry>
+            <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh>
+          </geometry>
+        </visual>
+
+        <collision name="collision">
+          <geometry>
+            <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh>
+          </geometry>
+        </collision>
+
+        <!-- TODO: Replace with accurate values of mass and inertia -->
+        <inertial>
+          <mass>0.0149</mass>
+          <pose>0 0 0.03 0 0 0</pose>
+          <inertia>
+            <ixx>0.000035</ixx>
+            <iyy>0.000035</iyy>
+            <izz>0.000032</izz>
+            <ixy>0.0</ixy>
+            <ixz>0.0</ixz>
+            <iyz>0.0</iyz>
+          </inertia>
+          </inertial>
+    </link>
+  </model>
+
+  <model name='Coke1'>
     <static>false</static>
     <link name="link">
         <pose>1.888160 -1.55947 0.366351 0 0 0</pose>
@@ -212,14 +251,47 @@
     </link>
   </model>
 	
-  <model name='cup_blue'>
-        <static>false</static>
-        <include>
-            <uri>model://cup_blue</uri>
-        </include>
-        <pose frame=''>2.07396 -1.88999 0.366351 0 -0 0</pose>
-	</model>
+ <!--  <model name='cup_blue'> -->
+ <!--        <static>false</static> -->
+ <!--        <include> -->
+ <!--            <uri>model://cup_blue</uri> -->
+ <!--        </include> -->
+ <!--        <pose frame=''>2.07396 -1.88999 0.366351 0 -0 0</pose> -->
+	<!-- </model> -->
 	
+  <model name="LivingRoomMug">
+    <link name="link">
+        <pose>2.07396 -1.88999 0.366351 0 -0 0</pose>
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://ACE_Coffee_Mug_Kristen_16_oz_cup/meshes/model.obj</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision_0">
+        <geometry>
+          <mesh>
+            <uri>model://ACE_Coffee_Mug_Kristen_16_oz_cup/meshes/model.obj</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <!-- TODO: Replace with accurate values of mass and inertia -->
+      <inertial>
+        <mass>0.0149</mass>
+        <pose>0 0 0.03 0 0 0</pose>
+        <inertia>
+          <ixx>0.000035</ixx>
+          <iyy>0.000035</iyy>
+          <izz>0.000032</izz>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyz>0.0</iyz>
+        </inertia>
+      </inertial>
+    </link>
+  </model>
+
   <model name='AirconditionerA_01_001'>
         <static>true</static>
         <include>
@@ -761,13 +833,15 @@
         </include>
         <pose frame=''>0.330699 -1.902792 0.065992 0.000000 0.000000 1.571733</pose>
 	</model>
-	<model name='Tableware_01_001'>
-        <static>true</static>    
-        <include>
-            <uri>model://aws_robomaker_residential_Tableware_01</uri>
-        </include>
-        <pose frame=''>7.15317 0.982767 0.817812 -0.001238 -0.000976 1.02476</pose>
-	</model>
+
+  <!-- <model name='Tableware_01_001'> -->
+  <!-- <static>true</static>     -->
+  <!-- <include> -->
+  <!-- <uri>model://aws_robomaker_residential_Tableware_01</uri> -->
+  <!-- </include> -->
+  <!-- <pose frame=''>7.15317 0.982767 0.817812 -0.001238 -0.000976 1.02476</pose> -->
+  <!-- </model> -->
+
 	<model name='Trash_01_001'>
         <static>true</static>    
         <include>
