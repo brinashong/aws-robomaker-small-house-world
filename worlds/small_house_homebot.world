@@ -192,65 +192,67 @@
     <pose>2.07556 -1.62802 0.366351 0 0 0</pose>
     <link name="link">
 
-        <visual name="visual">
-          <geometry>
-            <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh>
-          </geometry>
-        </visual>
+      <visual name="visual">
+        <pose>0.025 0 0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh>
+        </geometry>
+      </visual>
 
-        <collision name="collision">
-          <geometry>
-            <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh>
-          </geometry>
-        </collision>
+      <collision name="collision">
+        <pose>0.025 0 0 0 0 0</pose>
+        <geometry>
+          <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh>
+        </geometry>
+      </collision>
 
-        <!-- TODO: Replace with accurate values of mass and inertia -->
-        <inertial>
-          <mass>0.0149</mass>
-          <pose>0 0 0.03 0 0 0</pose>
-          <inertia>
-            <ixx>0.000035</ixx>
-            <iyy>0.000035</iyy>
-            <izz>0.000032</izz>
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyz>0.0</iyz>
-          </inertia>
-          </inertial>
+      <!-- TODO: Replace with accurate values of mass and inertia -->
+      <inertial>
+        <mass>0.0149</mass>
+        <pose>0.025 0 0.07 0 0 0</pose>
+        <inertia>
+          <ixx>0.000035</ixx>
+          <iyy>0.000035</iyy>
+          <izz>0.000032</izz>
+          <ixy>0.0</ixy>
+          <ixz>0.0</ixz>
+          <iyz>0.0</iyz>
+        </inertia>
+      </inertial>
     </link>
   </model>
 
-  <model name='Coke1'>
-    <pose>1.888160 -1.55947 0.366351 0 0 0</pose>
-    <link name="link">
-
-        <visual name="visual">
-          <geometry>
-            <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh>
-          </geometry>
-        </visual>
-
-        <collision name="collision">
-          <geometry>
-            <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh>
-          </geometry>
-        </collision>
-
-        <!-- TODO: Replace with accurate values of mass and inertia -->
-        <inertial>
-          <mass>0.0149</mass>
-          <pose>0 0 0.03 0 0 0</pose>
-          <inertia>
-            <ixx>0.000035</ixx>
-            <iyy>0.000035</iyy>
-            <izz>0.000032</izz>
-            <ixy>0.0</ixy>
-            <ixz>0.0</ixz>
-            <iyz>0.0</iyz>
-          </inertia>
-          </inertial>
-    </link>
-  </model>
+  <!-- <model name='Coke1'> -->
+  <!--   <pose>1.888160 -1.55947 0.366351 0 0 0</pose> -->
+  <!--   <link name="link"> -->
+  <!---->
+  <!--     <visual name="visual"> -->
+  <!--       <geometry> -->
+  <!--         <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh> -->
+  <!--       </geometry> -->
+  <!--     </visual> -->
+  <!---->
+  <!--     <collision name="collision"> -->
+  <!--       <geometry> -->
+  <!--         <mesh><uri>model://Coke/meshes/coke.obj</uri></mesh> -->
+  <!--       </geometry> -->
+  <!--     </collision> -->
+  <!---->
+  <!--     <!-- TODO: Replace with accurate values of mass and inertia --> -->
+  <!--     <inertial> -->
+  <!--       <mass>0.0149</mass> -->
+  <!--       <pose>0 0 0.6 0 0 0</pose> -->
+  <!--       <inertia> -->
+  <!--         <ixx>0.000035</ixx> -->
+  <!--         <iyy>0.000035</iyy> -->
+  <!--         <izz>0.000032</izz> -->
+  <!--         <ixy>0.0</ixy> -->
+  <!--         <ixz>0.0</ixz> -->
+  <!--         <iyz>0.0</iyz> -->
+  <!--       </inertia> -->
+  <!--     </inertial> -->
+  <!--   </link> -->
+  <!-- </model> -->
 	
  <!--  <model name='cup_blue'> -->
  <!--        <static>false</static> -->
@@ -261,7 +263,7 @@
 	<!-- </model> -->
 	
   <model name="LivingRoomMug">
-    <pose>2.07396 -1.88999 0.366351 0 -0 0</pose>
+    <pose>2.07396 -1.88999 0.366351 0 -0 3.14</pose>
     <link name="link">
       <visual name="visual">
         <geometry>
@@ -489,7 +491,7 @@
         <include>
             <uri>model://aws_robomaker_residential_CookingBench_01</uri>
         </include>
-        <pose frame=''>9.038383 -3.351140 0.903610 0 -0 3.137133</pose>
+        <pose frame=''>9.038383 -3.351140 0.803610 0 -0 3.137133</pose>
         <static> true </static>
 	</model>
 
@@ -612,7 +614,7 @@
         <include>
             <uri>model://aws_robomaker_residential_KitchenCabinet_01</uri>
         </include>
-        <pose frame=''>8.002009 -3.836509 0.012068 0 -0 -3.140001</pose>
+        <pose frame=''>8.002009 -3.836509 -0.112068 0 -0 -3.140001</pose>
 	</model>
 	<model name='KitchenUtensils_01_001'>
         <static>true</static>    
@@ -780,7 +782,7 @@
         <include>
             <uri>model://aws_robomaker_residential_DeskPortraitD_04</uri>
         </include>
-        <pose frame=''>4.302132 -5.176568 0.202496 0.007118 -0.000001 3.046683</pose>
+        <pose frame=''>4.302132 -5.176568 0.102496 0.007118 -0.000001 3.046683</pose>
 	</model>
        <model name='DeskPortraitB_01'>
         <static>true</static>    
@@ -818,14 +820,14 @@
         <include>
             <uri>model://aws_robomaker_residential_SeasoningBox_01</uri>
         </include>
-        <pose frame=''>9.107968 -2.651726 0.902458 -0.000006 0.000034 0.001290</pose>
+        <pose frame=''>9.107968 -2.651726 0.802458 -0.000006 0.000034 0.001290</pose>
 	</model>
 	<model name='ShoeRack_01_001'>
         <static>true</static>    
         <include>
             <uri>model://aws_robomaker_residential_ShoeRack_01</uri>
         </include>
-        <pose frame=''>4.297978 -5.173566 0 0 -0 0</pose>
+        <pose frame=''>4.297978 -5.173566 -0.3 0 -0 0</pose>
 	</model>
 	<model name='SofaC_01_001'>
         <static>true</static>    
