@@ -272,7 +272,7 @@
     <pose>2.07396 -1.88999 0.366351 0 -0 3.14</pose>
     <link name="link">
       <visual name="visual">
-        <pose>0.015 0.035 0 0 0 0</pose>
+        <!-- <pose>0.015 0.035 0 0 0 0</pose> -->
         <geometry>
           <mesh>
             <uri>model://ACE_Coffee_Mug_Kristen_16_oz_cup/meshes/model.obj</uri>
@@ -280,7 +280,7 @@
         </geometry>
       </visual>
       <collision name="collision_0">
-        <pose>0.015 0.025 0 0 0 0</pose>
+        <!-- <pose>0.015 0.025 0 0 0 0</pose> -->
         <geometry>
           <mesh>
             <uri>model://ACE_Coffee_Mug_Kristen_16_oz_cup/meshes/model.obj</uri>
@@ -290,8 +290,8 @@
       <!-- TODO: Replace with accurate values of mass and inertia -->
       <inertial>
         <mass>0.0149</mass>
-        <!-- <pose>0 0 0.03 0 0 0</pose> -->
-        <pose>0.015 0.035 0.03 0 0 0</pose>
+        <pose>0 0 0.03 0 0 0</pose>
+        <!-- <pose>0.015 0.035 0.03 0 0 0</pose> -->
         <inertia>
           <ixx>0.000035</ixx>
           <iyy>0.000035</iyy>
