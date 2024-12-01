@@ -72,39 +72,38 @@
     </link>
   </model>
 
-  <model name="Book2">
-    <pose>5.780757 0.695414 0.85 0 0 0</pose>
-    <link name="link">
-      <visual name="visual">
-        <geometry>
-          <mesh>
-            <uri>model://Eat_to_Live_The_Amazing_NutrientRich_Program_for_Fast_and_Sustained_Weight_Loss_Revised_Edition_Book/meshes/model.obj</uri>
-          </mesh>
-        </geometry>
-      </visual>
-      <collision name="collision_0">
-        <geometry>
-          <mesh>
-            <uri>model://Eat_to_Live_The_Amazing_NutrientRich_Program_for_Fast_and_Sustained_Weight_Loss_Revised_Edition_Book/meshes/model.obj</uri>
-          </mesh>
-        </geometry>
-      </collision>
-
-      <!-- TODO: Replace with accurate values of mass and inertia -->
-      <inertial>
-        <pose>0 0 0.07 0 0 0</pose>
-        <mass>0.5</mass>
-        <inertia>
-          <ixx>0.00109</ixx>
-          <ixy>0.0</ixy>
-          <ixz>0.0</ixz>
-          <iyy>0.00245</iyy>
-          <iyz>0.0</iyz>
-          <izz>0.00400</izz>
-        </inertia>
-      </inertial>
-    </link>
-  </model>
+  <!-- <model name="Book2"> -->
+  <!--   <pose>5.780757 0.695414 0.85 0 0 0</pose> -->
+  <!--   <link name="link"> -->
+  <!--     <visual name="visual"> -->
+  <!--       <geometry> -->
+  <!--         <mesh> -->
+  <!--           <uri>model://Eat_to_Live_The_Amazing_NutrientRich_Program_for_Fast_and_Sustained_Weight_Loss_Revised_Edition_Book/meshes/model.obj</uri> -->
+  <!--         </mesh> -->
+  <!--       </geometry> -->
+  <!--     </visual> -->
+  <!--     <collision name="collision_0"> -->
+  <!--       <geometry> -->
+  <!--         <mesh> -->
+  <!--           <uri>model://Eat_to_Live_The_Amazing_NutrientRich_Program_for_Fast_and_Sustained_Weight_Loss_Revised_Edition_Book/meshes/model.obj</uri> -->
+  <!--         </mesh> -->
+  <!--       </geometry> -->
+  <!--     </collision> -->
+  <!---->
+  <!--     <inertial> -->
+  <!--       <pose>0 0 0.07 0 0 0</pose> -->
+  <!--       <mass>0.5</mass> -->
+  <!--       <inertia> -->
+  <!--         <ixx>0.00109</ixx> -->
+  <!--         <ixy>0.0</ixy> -->
+  <!--         <ixz>0.0</ixz> -->
+  <!--         <iyy>0.00245</iyy> -->
+  <!--         <iyz>0.0</iyz> -->
+  <!--         <izz>0.00400</izz> -->
+  <!--       </inertia> -->
+  <!--     </inertial> -->
+  <!--   </link> -->
+  <!-- </model> -->
 
   <model name='Coke'>
     <pose>2.07556 -1.62802 0.366351 0 0 0</pose>
